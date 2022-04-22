@@ -1,6 +1,5 @@
 import subprocess
 import sys
-import os
 import lang.python as python
 
 help = """
