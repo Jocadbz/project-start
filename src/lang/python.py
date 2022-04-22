@@ -3,16 +3,20 @@ import sys
 
 folder_name = "your-py-project"
 
+baseCode = """# !/usr/bin/env python3
+
+print("Hello World!")
+"""
+
 
 def createAFolder():
     os.mkdir(folder_name)
 
 
 def main():
-    print()
     os.mkdir(f"{folder_name}/src")
     main = open(f'{folder_name}/src/main.py', 'w')
-    main.write('# !/usr/bin/env python3')
+    main.write(baseCode)
     main.close()
 
 
