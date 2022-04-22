@@ -1,7 +1,16 @@
 import os
 import sys
 
-folder_name = "your-py-project"
+folder_name = "your-c-project"
+
+baseCode = """#include <stdio.h> 
+#include <stdlib.h> 
+
+int main() {
+    printf("Hello World!\n");
+    return 0;
+}
+"""
 
 
 def createAFolder():
@@ -9,16 +18,15 @@ def createAFolder():
 
 
 def main():
-    print()
     os.mkdir(f"{folder_name}/src")
-    main = open(f'{folder_name}/src/main.py', 'w')
-    main.write('# !/usr/bin/env python3')
+    main = open(f'{folder_name}/src/main.c', 'w')
+    main.write(baseCode)
     main.close()
 
 
 def readme():
     readme = open(f'{folder_name}/README.md', 'w')
-    readme.write('### My First Python App!')
+    readme.write('### My First C App!')
     readme.close()
 
 

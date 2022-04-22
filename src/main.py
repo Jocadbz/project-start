@@ -1,13 +1,15 @@
 import subprocess
 import sys
 import lang.python as python
+import lang.clang as clang
 
 help = """
     Currently supported languages:
     - Python
+    - C
        """
 
-abbreviationsDict = {"python": python.start}
+abbreviationsDict = {"python": python.start, "c": clang.start}
 
 
 def DO_WORK():
