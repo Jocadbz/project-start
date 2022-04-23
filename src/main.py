@@ -11,7 +11,10 @@ help = """
     - Vala
        """
 
-abbreviationsDict = {"python": python.start, "c": clang.start, "vala": vala.start}
+version = "Version 1.1.0"
+
+abbreviationsDict = {"python": python.start, "c": clang.start,
+                     "vala": vala.start}
 
 
 def DO_WORK():
@@ -25,7 +28,10 @@ def DO_WORK():
         for arguments in args:
             if arguments == '--help':
                 print(help)
-                break
+                sys.exit(0)
+            elif arguments == '--version':
+                print(version)
+                sys.exit(0)
             else:
                 try:
                     if (arguments in abbreviationsDict.keys()):
