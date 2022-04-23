@@ -26,6 +26,7 @@ def DO_WORK():
         print('Wrong usage.')
     else:
         for arguments in args:
+            arguments = arguments.lower()
             if arguments == '--help':
                 print(help)
                 sys.exit(0)
@@ -34,21 +35,13 @@ def DO_WORK():
                 sys.exit(0)
             else:
                 try:
-                    if (arguments in abbreviationsDict.keys()):
-                        # get your function based on key in abbreviationsDict
-                        requiredFunction = abbreviationsDict[arguments]
-                        requiredFunction()  # Execute this function.
-                        break
-# Since the user input a command that can't be used as the name of a function..
-                    else:
-                        # install = INSTALL + () = INSTALL() and eval it.
-                        eval(f"{arguments.upper()}()")
-                        break
-# (NameError) will be throw in case you use a command which is not present.
-                except NameError:
+                    # get your function based on key in abbreviationsDict
+                    languageRequired = abbreviationsDict[arguments]
+                    languageRequired()  # Execute this function.
+                    print(f"Your {arguments.title()} Project was created!")
+                # (KeyError) will be throw in case you request a Language which is not present (yet).
+                except KeyError:
                     print('Unrecognized Language.')
-                    break
-    print("Project was created!")
 
 
 if __name__ == '__main__':
