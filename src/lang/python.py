@@ -1,5 +1,4 @@
 import os
-import sys
 
 folder_name = "your-py-project"
 
