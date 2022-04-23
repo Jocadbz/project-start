@@ -2,14 +2,16 @@ import subprocess
 import sys
 import lang.python as python
 import lang.clang as clang
+import lang.vala as vala
 
 help = """
     Currently supported languages:
     - Python
     - C
+    - Vala
        """
 
-abbreviationsDict = {"python": python.start, "c": clang.start}
+abbreviationsDict = {"python": python.start, "c": clang.start, "vala": vala.start}
 
 
 def DO_WORK():
@@ -40,6 +42,7 @@ def DO_WORK():
                 except NameError:
                     print('Unrecognized Language.')
                     break
+    print("Project was created!")
 
 
 if __name__ == '__main__':

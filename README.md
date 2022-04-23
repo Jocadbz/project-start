@@ -10,6 +10,7 @@ Currently supports:
 
  - Python
  - C
+ - Vala
 
 
 More languages will be supported with time.
@@ -24,3 +25,6 @@ project-start python # creates a project for python
 ```bash
 project-start c # creates a project for C
 ```
+
+```bash
+project-start vala # creates a project for Vala
