@@ -1,10 +1,14 @@
 import os
 
-folder_name = "your-py-project"
+folder_name = "your-cpp-project"
 
-baseCode = """# !/usr/bin/env python3
+baseCode = """
+#include <iostream> 
 
-print("Hello World!")
+int main() {
+    std::cout << "Goodbye World!"; 
+    return 0;
+}
 """
 
 
@@ -14,14 +18,14 @@ def createAFolder():
 
 def main():
     os.mkdir(f"{folder_name}/src")
-    main = open(f'{folder_name}/src/main.py', 'w')
+    main = open(f'{folder_name}/src/main.cpp', 'w')
     main.write(baseCode)
     main.close()
 
 
 def readme():
     readme = open(f'{folder_name}/README.md', 'w')
-    readme.write('### My First Python App!')
+    readme.write('### My First C++ App!')
     readme.close()
 
 

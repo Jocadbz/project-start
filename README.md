@@ -9,7 +9,7 @@ Conveniently creates a README.md, License and the main code file on the director
 Currently supports: 
 
  - Python
- - C
+ - C/C++
  - Vala
 
 
@@ -23,7 +23,7 @@ project-start python # creates a project for python
 ```
 
 ```bash
-project-start c # creates a project for C
+project-start c or cpp # creates a project for C or C++
 ```
 
 ```bash
