@@ -3,18 +3,21 @@ import lang.python as python
 import lang.clang as clang
 import lang.vala as vala
 import lang.cpp as cpp
+import lang.julia as julia
 
 help = """
     Currently supported languages:
     - Python
     - C/C++ 
     - Vala
+    - Julia
        """
 
 version = "Version 1.1.0"
 
 abbreviationsDict = {"python": python.start, "c": clang.start,
-                     "vala": vala.start, "cpp": cpp.start}
+                     "vala": vala.start, "cpp": cpp.start,
+                     "julia": julia.start}
 
 
 def DO_WORK():
