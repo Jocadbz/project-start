@@ -14,7 +14,7 @@ help = """
     - Julia
        """
 
-version = "Version 1.1.0"
+version = "Version 1.2.0"
 
 abbreviationsDict = {"python": python.start, "c": clang.start,
                      "vala": vala.start, "cpp": cpp.start,
