@@ -9,8 +9,9 @@ Conveniently creates a README.md, License and the main code file on the director
 Currently supports: 
 
  - Python
- - C/C++
+ - C/C++/C#
  - Vala
+ - Julia
 
 
 More languages will be supported with time.
@@ -23,8 +24,21 @@ project-start python # creates a project for python
 ```
 
 ```bash
-project-start c or cpp # creates a project for C or C++
+project-start c # creates a project for C
+```
+
+```bash
+project-start cpp # creates a project for C++
+```
+
+```bash
+project-start cs # creates a project for C#
 ```
 
 ```bash
 project-start vala # creates a project for Vala
+```
+
+```bash
+project start julia # creates a project for Julia
+```
