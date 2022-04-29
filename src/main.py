@@ -9,7 +9,7 @@ import lang.cs as cs
 help = """
     Currently supported languages:
     - Python
-    - C/C++/C# 
+    - C/C++/C#
     - Vala
     - Julia
        """
@@ -44,7 +44,6 @@ def DO_WORK():
                     languageRequired = abbreviationsDict[arguments]
                     languageRequired()  # Execute this function.
                     print(f"Your {arguments.title()} Project was created!")
-                # (KeyError) will be throw in case you request a Language which is not present (yet).
                 except KeyError:
                     print(f'Unrecognized Language: {arguments}.')
 
