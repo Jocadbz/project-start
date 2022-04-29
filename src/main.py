@@ -4,7 +4,7 @@ import lang.clang as clang
 import lang.vala as vala
 import lang.cpp as cpp
 import lang.julia as julia
-import lang.cs as cs	
+import lang.cs as cs
 
 help = """
     Currently supported languages:
