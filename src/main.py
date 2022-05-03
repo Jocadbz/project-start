@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 import lang.python as python
 import lang.clang as clang
