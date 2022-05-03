@@ -5,6 +5,7 @@ import lang.vala as vala
 import lang.cpp as cpp
 import lang.julia as julia
 import lang.cs as cs
+import lang.bash as bash
 
 help = """
     Currently supported languages:
@@ -12,13 +13,14 @@ help = """
     - C/C++/C#
     - Vala
     - Julia
+    - Bash
        """
 
 version = "Version 1.2.0"
 
 abbreviationsDict = {"python": python.start, "c": clang.start,
                      "vala": vala.start, "cpp": cpp.start,
-                     "julia": julia.start, "cs": cs.start}
+                     "julia": julia.start, "cs": cs.start, "bash": bash.start}
 
 
 def DO_WORK():
