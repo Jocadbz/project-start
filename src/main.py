@@ -8,7 +8,7 @@ import lang.julia as julia
 import lang.cs as cs
 import lang.bash as bash
 
-help = """
+app_help = """
     Currently supported languages:
     - Python
     - C/C++/C#
@@ -24,7 +24,7 @@ abbreviationsDict = {"python": python.start, "c": clang.start,
                      "julia": julia.start, "cs": cs.start, "bash": bash.start}
 
 
-def DO_WORK():
+def do_work():
     """ Function to handle command line usage"""
     args = sys.argv
     args = args[1:]  # First element of args is the file name
@@ -36,7 +36,7 @@ def DO_WORK():
         for arguments in args:
             arguments = arguments.lower()
             if arguments == '--help':
-                print(help)
+                print(app_help)
                 sys.exit(0)
             elif arguments == '--version':
                 print(version)
@@ -44,12 +44,12 @@ def DO_WORK():
             else:
                 try:
                     # Get your function based on key in abbreviationsDict
-                    languageRequired = abbreviationsDict[arguments]
-                    languageRequired()  # Execute this function.
+                    language_required = abbreviationsDict[arguments]
+                    language_required()  # Execute this function.
                     print(f"Your {arguments.title()} Project was created!")
                 except KeyError:
                     print(f'Unrecognized Language: {arguments}.')
 
 
 if __name__ == '__main__':
-    DO_WORK()
+    do_work()
