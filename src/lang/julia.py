@@ -8,31 +8,31 @@ folder_name = "your-cpp-project"
 baseCode = """println("Hello, World!")"""
 
 
-def createAFolder():
+def create_a_folder():
     os.mkdir(folder_name)
 
 
 def main():
     os.mkdir(f"{folder_name}/src")
-    main = open(f'{folder_name}/src/main.jl', 'w')
-    main.write(baseCode)
-    main.close()
+    main_file = open(f'{folder_name}/src/main.jl', 'w')
+    main_file.write(baseCode)
+    main_file.close()
 
 
 def readme():
-    readme = open(f'{folder_name}/README.md', 'w')
-    readme.write('### My First Julia App!')
-    readme.close()
+    readme_git = open(f'{folder_name}/README.md', 'w')
+    readme_git.write('### My First Julia App!')
+    readme_git.close()
 
 
-def license():
-    license = open(f'{folder_name}/LICENSE', 'w')
-    license.write('License goes here.')
-    license.close()
+def license_project():
+    license_git = open(f'{folder_name}/LICENSE', 'w')
+    license_git.write('License goes here.')
+    license_git.close()
 
 
 def start():
-    createAFolder()
+    create_a_folder()
     main()
-    license()
+    license_project()
     readme()
